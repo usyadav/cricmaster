@@ -1,1 +1,29 @@
-<h2>{{ pageTitle }}</h2>
+<nav class="navbar fixed-top navbar-light bg-faded">
+  <div class="d-inline-flex justify-content-between ">
+      <a class="navbar-brand" href="#">{{ pageTitle }}</a>
+      <ul class="nav d-inline-flex justify-content-end">
+          <li class="nav-item">
+              <a class="nav-link active" href="#!/teams">Teams</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#!/players">Players</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#!/tournament">Tournament</a>
+          </li>
+          <li class="nav-item">
+                  <a class="nav-link active" href="#!/">Home</a>
+          </li>
+      </ul>
+  </div>
+</nav>
+<main class="pt-3">
+  <div class="container-fluid">
+      <h5 class="text-muted">
+        {{welcomeText}}
+      </h5>      
+  </div>
+</main>
+<nav class="navbar fixed-bottom navbar-light bg-faded text-center text-sm">
+  <a href="#"> &copy;{{footerText}}</a>
+</nav>

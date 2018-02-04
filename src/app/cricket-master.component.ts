@@ -8,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class CricketMasterComponent implements OnInit {
 
   pageTitle = "Cricket Master";
+
+  welcomeText = "It's Cricket time.";
   
-  constructor() { }
+  footerText:string;
+  constructor() { 
+
+  }
 
   ngOnInit() {
+    let year =(new Date()).getFullYear();
+    this.footerText = year + " Cric Master";
   }
 
 }
