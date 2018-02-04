@@ -1,0 +1,42 @@
+<!-- NgNativeValidate -->
+<!-- template reference variable #playerDetailForm="ngForm" -->
+<form #playerDetailForm="ngForm">     
+     <!-- name -->
+     <div class="form-group" [class.has-danger]="name.invalid && !name.pristine">
+        <label>Name</label>
+        <input #name="ngModel" type="text" name="name" class="form-control" [(ngModel)]="player.name" required>        
+        <p *ngIf="name.invalid && !name.pristine && name.touched" 
+                class="help-block">You name is required.
+        </p>        
+    </div>
+    
+    <!-- display name -->
+    <div class="form-group" [class]="{ 'has-danger' : nickname.invalid && !nickname.pristine }">
+        <label>Nick Name</label>
+        <input #nickname="ngModel" type="text" name="nickname" class="form-control" 
+        [(ngModel)]="player.nickname" minlength="3" maxlength="15">
+        <p *ngIf="nickname.errors?.minlength" class="help-block">Nick Name is too short.</p>
+        <p *ngIf="nickname.errors?.maxlength" class="help-block">Nick Name is too long.</p> 
+    </div>
+    <!-- email -->
+    <div class="form-group" [class.has-danger]="email.invalid && !email.pristine">
+        <label>Email</label>
+        <input #email="ngModel" type="email" name="email" email class="form-control" [(ngModel)]="player.email">
+        <p *ngIf="email.invalid && !email.pristine" class="help-block">Enter a valid email.</p>
+    </div>
+
+    <div class="form-group" [class.has-danger]="!isTeamSelected && team.touched ">
+        <label>Team</label>
+        <select #team="ngModel" placeholder="Select a Team" name="team" class="form-control" 
+                [(ngModel)]="player.team" 
+          (change)="onTeamChange()">
+          <option value="default">Select Team</option>
+          <option *ngFor="let team of teams" value="{{team.value}}">{{team.name}}</option>
+        </select>
+    </div>
+</form>
+
+<div>
+  <p>Acess form values</p>
+  Is form valid : {{playerDetailForm.valid}}
+</div>
