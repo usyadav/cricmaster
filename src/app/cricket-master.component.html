@@ -1,34 +1,37 @@
 <nav class="navbar fixed-top navbar-light bg-faded">
-  <div class="d-inline-flex justify-content-between ">
-      <a class="navbar-brand" href="#">{{ pageTitle }}</a>
-      <ul class="nav d-inline-flex justify-content-end">
-          <li class="nav-item">
-              <a class="nav-link active" href="#!/teams">Teams</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#!/players">Players</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#!/tournament">Tournament</a>
-          </li>
-          <li class="nav-item">
-                  <a class="nav-link active" href="#!/">Home</a>
-          </li>
-      </ul>
-  </div>
+    <div class="d-inline-flex justify-content-between ">
+        <a class="navbar-brand" href="#">{{ pageTitle }}</a>
+        <ul class="nav d-inline-flex justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/player">Players</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/team">Teams</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/tournament">Tournament</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " routerLink="/demos">Demos</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 <main class="pt-3">
-  <div class="container-fluid">
-      <h5 class="text-muted">
-        {{welcomeText}}
-      </h5>   
-      <div>
-        <!-- <app-binding-demo></app-binding-demo> -->
-        <!-- <app-manage-player></app-manage-player> -->
-        <app-directive-demo></app-directive-demo>        
-      </div>   
-  </div>  
+    <div class="container-fluid">
+        <h5 class="text-muted">
+            {{welcomeText}}
+        </h5>
+        <div>
+            <!-- Start : This will be replaced by url component-->
+            <router-outlet></router-outlet>
+            <!-- End-->
+        </div>
+    </div>
 </main>
 <nav class="navbar fixed-bottom navbar-light bg-faded text-center text-sm">
-  <a href="#"> &copy;{{footerText}}</a>
+    <a href="#"> &copy;{{footerText}}</a>
 </nav>
