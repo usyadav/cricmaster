@@ -14,39 +14,44 @@ export class DemoComponent implements OnInit {
   ngOnInit() {
     this.menuItems = [{
       title: "Custom Modules",
-      icon: "centercode",
+      icon: "fab fa-modx",
       state: "custommodule"
     },{
       title: "Data Binding",
-      icon: "flash",
+      icon: "fas fa-exchange-alt",
       state: "databinding"
     },
     {
       title: "Using Directive and Pipes",
-      icon: "file-code-o",
+      icon: "fas fa-plug",
       state: "directives"
     },{
       title: "Create Component",
-      icon: "eye",
+      icon: "fas fa-code",
       state: "component"
     },
     {
       title: "Angular Forms",
-      icon: "handshake-o",
+      icon: "fas fa-stethoscope",
       state: "forms"
     },
     {
-      title: "Routing and Services",
-      icon: "suitcase",
+      title: "Services",
+      icon: "fas fa-anchor",
+      state: "service"
+    },
+    {
+      title: "Routing",
+      icon: "fas fa-anchor",
       state: "routing"
     },
     {
       title: "Custom Directives and Pipes",
-      icon: "certificate",
+      icon: "far fa-eye-slash",
       state: "customdirective"
     } ,{
       title: "Others",
-      icon: "group",
+      icon: "fas fa-utensils",
       state: "others"
     }      
     ];

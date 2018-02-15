@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+
 import { DataBindingModule } from './data-binding/data-binding.module';
 import { UsingDirectivesModule } from './using-directives/using-directives.module';
+import { UsingServicesModule } from './using-services/using-services.module';
+
 import { DemoComponent } from './demo.component';
 import { BindingDemoComponent } from './data-binding/binding-demo.component';
 import { DirectiveDemoComponent } from './using-directives/directive-demo.component';
@@ -10,23 +13,30 @@ import { CustomDirectiveComponent } from './custom-directive/custom-directive.co
 import { RoutingDemoComponent } from './routing-demo/routing-demo.component';
 import { UsingFormsComponent } from './using-forms/using-forms.component';
 import { DemoInProgressComponent } from './demo-in-progress/demo-in-progress.component';
+import { ServiceDemoComponent } from './using-services/service-demo/service-demo.component';
 
-const demoRoutes: Routes = [  
-  { path: 'demos', component: DemoComponent },
-  { path: 'databinding', component: BindingDemoComponent },
-  { path: 'custommodule', component: DemoInProgressComponent },
-  { path: 'directives', component: DirectiveDemoComponent },
-  { path: 'component', component: CustomDirectiveComponent },
-  { path: 'forms', component: UsingFormsComponent },
-  { path: 'routing', component: RoutingDemoComponent },
-  { path: 'others', component: DemoInProgressComponent },  
+const demoRoutes: Routes = [
+  {
+    path: 'demos', component: DemoComponent, children: [
+      { path: 'databinding', component: BindingDemoComponent },
+      { path: 'custommodule', component: DemoInProgressComponent },
+      { path: 'directives', component: DirectiveDemoComponent },
+      { path: 'component', component: CustomDirectiveComponent },
+      { path: 'forms', component: UsingFormsComponent },
+      { path: 'service', component: ServiceDemoComponent },
+      { path: 'routing', component: RoutingDemoComponent },
+      { path: 'customdirective', component: DemoInProgressComponent },
+      { path: 'others', component: DemoInProgressComponent },
+    ]
+  }
 ];
 
 @NgModule({
   imports: [
-    CommonModule,
+    CommonModule, DataBindingModule, UsingDirectivesModule,UsingServicesModule,
     RouterModule.forChild(demoRoutes)
   ],
-  declarations:[DemoInProgressComponent,CustomDirectiveComponent,UsingFormsComponent,RoutingDemoComponent]
+  exports: [RouterModule]
 })
 export class DemoRouteModule { }
+

@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PlayerModule } from './player/player.module';
 import { SharedModule } from './shared/shared.module';
-import { DemoModule } from './demo/demo.module';
+
+
 import { TournmentModule } from './tournment/tournment.module';
 import { TeamModule } from './team/team.module';
 
@@ -21,17 +22,13 @@ const appRoutes: Routes = [
   { path: 'team', component: TeamComponent },
   { path: 'home', component: HomeComponent },
   { path: 'tournament', component: TournamentComponent },
-  {
-    path: 'demos', component: DemoComponent
-  },
-  { path: 'player', component: PlayerComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'player', component: PlayerComponent }
+  ,{ path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [PlayerModule, DemoModule, SharedModule, TeamModule, TournmentModule,
-    RouterModule.forRoot(appRoutes, { enableTracing: true })],
-  declarations: [HomeComponent],
+  imports: [PlayerModule,SharedModule, TeamModule, TournmentModule,
+     RouterModule.forRoot(appRoutes, { enableTracing: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

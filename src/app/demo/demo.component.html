@@ -4,7 +4,7 @@
     <ul class="heroes">
       <li *ngFor="let menu of menuItems" class="mt-1 mb-1" [class.selected]="menu === selecetdMenuItem" (click)="onMenuSelect(menu)">
         <a routerLink="/demos/{{menu.state}}">
-          <i class=" fa fa-{{menu.icon}}"></i>
+          <i class="{{menu.icon}}"></i>
           <span>{{menu.title}}</span>
         </a>
       </li>
