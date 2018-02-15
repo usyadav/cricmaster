@@ -9,7 +9,7 @@ export class CricketMasterComponent implements OnInit {
 
   pageTitle = "Cricket Master";
 
-  welcomeText = "It's Cricket time.";
+  welcomeText = "Welcome to our App";
   
   footerText:string;
   constructor() { 
