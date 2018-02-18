@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularMaterialModule } from './../angular-material.module';
 import { DemoRouteModule } from './demo-route.module';
-
+import { SharedModule } from './../shared/shared.module';
 import { DemoComponent } from './demo.component';
 import { BindingDemoComponent } from './data-binding/binding-demo.component';
 import { DirectiveDemoComponent } from './using-directives/directive-demo.component';
@@ -19,7 +19,7 @@ import { DemoInProgressComponent } from './demo-in-progress/demo-in-progress.com
 
 @NgModule({
   imports: [
-    CommonModule , FormsModule, BrowserModule,  BrowserAnimationsModule,AngularMaterialModule,DemoRouteModule
+    CommonModule , FormsModule, BrowserModule, SharedModule, BrowserAnimationsModule,AngularMaterialModule,DemoRouteModule
   ],
   declarations: [DemoComponent, DemoInProgressComponent,CustomDirectiveComponent,UsingFormsComponent
     ,RoutingDemoComponent]

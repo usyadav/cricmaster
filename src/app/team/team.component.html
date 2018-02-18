@@ -1,3 +1,16 @@
-<p>
-  team-component works!
-</p>
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Teams List!</h4>   
+</div>
+
+<div class="d-flex justify-content-between">
+  <div *ngFor="let team of teams">
+      <div class="card">
+          <div class="card-block">
+              <h4 class="card-title">{{team.name}}</h4>
+          </div>
+          <ul class="list-group list-group-flush" *ngFor="let member of team.players">
+              <li class="list-group-item">{{member}}</li>
+          </ul>
+      </div>
+  </div>
+</div>

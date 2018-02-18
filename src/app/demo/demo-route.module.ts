@@ -29,7 +29,7 @@ const demoRoutes: Routes = [
       { path: 'forms', component: UsingFormsComponent },
       { path: 'service', component: ServiceDemoComponent },
       { path: 'routing', component: RoutingDemoComponent },
-      { path: 'customdirective', component: DemoInProgressComponent },
+      { path: 'customdirective', component: CustomDirectiveComponent },
       { path: 'others', component: DemoInProgressComponent },
     ]
   }

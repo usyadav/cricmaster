@@ -1,3 +1,21 @@
-<p>
-  custom-directive works!
-</p>
+<h5 class="bg-primary text-white">
+  Custom Directives
+</h5>
+
+<div class="p-1">
+  <p appHighlight>Simple directive</p>
+  <p appHighlightWithColor tcolor="blue" tsize="20px">pass parameter to Directive Demo </p>
+  <p appHighlightWithEvent="yellow" defaultValue="blue">dynamic color from directive event Demo</p>
+</div>
+<h5 class="bg-primary text-white">
+  Custom Pipes
+</h5>
+
+<div class="p-1">
+  <p>Remove hyphen from 'A-B' to spaces :
+    <span>{{ 'A-B' | convertToSpaces:'-' }}</span>
+  </p>
+  <p>Remove * from 'A*B' to spaces :
+    <span>{{ 'A*B' | convertToSpaces:'*' }}</span>
+  </p>
+</div>
