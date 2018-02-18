@@ -7,7 +7,6 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 })
 export class UsingFormsComponent implements OnInit {
 
-
   @ViewChild('team') team: ElementRef;
   isTeamSelected: boolean;
 
@@ -36,7 +35,6 @@ export class UsingFormsComponent implements OnInit {
 
   }
 
-
   validateTeamSelected() {
     if (this.player.team === "default") {
       this.isTeamSelected = false;
@@ -52,5 +50,4 @@ export class UsingFormsComponent implements OnInit {
     else {
     }
   }
-
 }

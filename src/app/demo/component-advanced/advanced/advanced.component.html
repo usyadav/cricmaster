@@ -1,0 +1,13 @@
+<div class="p-1">Component Interaction Demo</div>
+<div class="alert alert-info p-1 m-1" role="alert">
+  <strong>Selected Player :</strong> {{selectedPlayer | json}}
+</div>
+<div class="p-1">
+  <app-player-list-demo [playerList]="playerList" (onSelected)="playerSelected($event)"></app-player-list-demo>
+  <!-- <app-player-info-demo [playerIn]="selectedPlayer" #playerInfo (newPlayer)="onPlayerAdd($event)"></app-player-info-demo> -->
+  <app-player-info-demo #playerInfo (newPlayer)="onPlayerAdd($event)"></app-player-info-demo>
+</div>
+<div class="alert alert-warning p-1 m-1">
+  Player template Reference : Get access to child property
+  <br> {{playerInfo.player.name}}
+</div>
