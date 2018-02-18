@@ -28,7 +28,7 @@ export class ServiceDemoComponent implements OnInit {
       this.players = this.playerSerive.getPlayersFromHttp().subscribe(
         data => { this.handlePlayerData(data) },
         err => { this.handleError(err); }
-      );;
+      );
     } else {
       this.players = this.playerSerive.getPlayers();
     }

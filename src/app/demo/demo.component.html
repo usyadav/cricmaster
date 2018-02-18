@@ -1,16 +1,12 @@
-<h4 class="text-muted">Demos</h4>
-<div class="d-inline-flex justify-content-between ">
-  <div class="d-flex">
-    <ul class="heroes">
-      <li *ngFor="let menu of menuItems" class="mt-1 mb-1" [class.selected]="menu === selecetdMenuItem" (click)="onMenuSelect(menu)">
-        <a routerLink="/demos/{{menu.state}}">
-          <i class="{{menu.icon}}"></i>
-          <span>{{menu.title}}</span>
-        </a>
-      </li>
-    </ul>
-    <div class="d-inline-flex">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+<div class="d-flex flex-row">
+  <ul class="heroes">
+    <li *ngFor="let menu of menuItems" class="mt-1 mb-1" [class.selected]="menu === selecetdMenuItem" (click)="onMenuSelect(menu)">
+      <a routerLink="/demos/{{menu.state}}">
+        <i class="{{menu.icon}}"></i>
+        <span>{{menu.title}}</span>
+      </a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+  <div class="d-flex"></div>
 </div>

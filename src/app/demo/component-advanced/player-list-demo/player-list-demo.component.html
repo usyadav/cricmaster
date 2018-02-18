@@ -1,0 +1,31 @@
+<p>Players List</p>
+<table class='table table-bordered table-hover table-sm' *ngIf="playerList && playerList.length>0">
+  <thead class="thead-inverse">
+    <tr>
+      <th *ngIf="false">
+        <span>
+          <i class="fas fa-gavel"></i>
+        </span>
+      </th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Nicky</th>
+      <th>Email</th>
+      <th>Team</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of playerList;let pi=index;" (click)="onRowClick($event,pi,player)">
+      <td *ngIf="false">
+        <span class="pl-1 action-btn-delete">
+          <i class="far fa-trash-alt"></i>
+        </span>
+      </td>
+      <td>{{pi + 1}}</td>
+      <td>{{player.name}}</td>
+      <td>{{player.nickname}}</td>
+      <td>{{player.email}}</td>
+      <td>{{player.team}}</td>
+    </tr>
+  </tbody>
+</table>

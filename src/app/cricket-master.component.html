@@ -20,16 +20,14 @@
         </ul>
     </div>
 </nav>
-<main class="pt-3">
-    <div class="container-fluid">
-        <h5 class="text-muted">
-            {{welcomeText}}
-        </h5>
-        <div>
-            <!-- Start : This will be replaced by url component-->
-            <router-outlet></router-outlet>
-            <!-- End-->
-        </div>
+<main class="pt-3  pl-3">
+    <h5 class="text-muted">
+        {{welcomeText}}
+    </h5>
+    <div class="d-flex">
+        <!-- Start : This will be replaced by url component-->
+        <router-outlet></router-outlet>
+        <!-- End-->
     </div>
 </main>
 <nav class="navbar fixed-bottom navbar-light bg-faded text-center text-sm">

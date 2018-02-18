@@ -17,7 +17,6 @@ import { RoutingDemoComponent } from './routing-demo/routing-demo.component';
 import { UsingFormsComponent } from './using-forms/using-forms.component';
 import { DemoInProgressComponent } from './demo-in-progress/demo-in-progress.component';
 
-
 @NgModule({
   imports: [
     CommonModule , FormsModule, BrowserModule,  BrowserAnimationsModule,AngularMaterialModule,DemoRouteModule

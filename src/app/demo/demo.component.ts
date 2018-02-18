@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-demo-component',
   templateUrl: './demo.component.html',
-  styleUrls: ['./demo.component.css']
+  styleUrls: ['./demo.component.css'],  
 })
 export class DemoComponent implements OnInit {
 
@@ -39,6 +39,11 @@ export class DemoComponent implements OnInit {
       title: "Services",
       icon: "fas fa-anchor",
       state: "service"
+    },
+    {
+      title: "Component Advanced",
+      icon: "fas fa-code",
+      state: "componentadvanced"
     },
     {
       title: "Routing",
