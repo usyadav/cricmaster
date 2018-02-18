@@ -1,4 +1,4 @@
-<div class="d-flex flex-row">
+<div class="container-fluid d-flex flex-row">
   <ul class="heroes">
     <li *ngFor="let menu of menuItems" class="mt-1 mb-1" [class.selected]="menu === selecetdMenuItem" (click)="onMenuSelect(menu)">
       <a routerLink="/demos/{{menu.state}}">
@@ -7,6 +7,7 @@
       </a>
     </li>
   </ul>
-  <router-outlet></router-outlet>
-  <div class="d-flex"></div>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
 </div>

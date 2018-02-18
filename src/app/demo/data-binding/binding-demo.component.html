@@ -1,41 +1,37 @@
-<div class="card">
-  <h5 class="bg-primary text-white">
-    Data Binding Examples
-  </h5>
-  <div class="text-success p-1">
-    Interpolation :
-    <small>{{txtInterpolation}}</small>
-  </div>
-  <p class="card-text  p-1">
-    Interpolation text :
-    <span>{{interpolationValue}}</span>
-  </p>
+<h5 class="bg-primary text-white">
+  Data Binding Examples
+</h5>
+<div class="text-success p-1">
+  Interpolation :
+  <small>{{txtInterpolation}}</small>
 </div>
-<div class="card ">
-  <div class="text-primary  p-1">
-    PropertyBinding :
-    <small>{{txtProperty}}</small>
-  </div>
-  <p class="card-text  p-1">
-    <span [class]="propertyBindingClass">Added class from property binding </span>
-  </p>
+<p class="card-text  p-1">
+  Interpolation text :
+  <span>{{interpolationValue}}</span>
+</p>
+
+<div class="text-primary  p-1">
+  PropertyBinding :
+  <small>{{txtProperty}}</small>
+</div>
+<p class="card-text  p-1">
+  <span [class]="propertyBindingClass">Added class from property binding </span>
+</p>
+
+<div class="text-danger p-1">
+  Event Binding :
+  <small>{{txtEvent}}</small>
+</div>
+<div class="card-text  p-1">
+  <button (click)="onclick($event)" class="btn-primary btn-small">Click Me</button>{{clickResult}}
 </div>
 
-<div class="card ">
-  <div class="text-danger p-1">
-    Event Binding :
-    <small>{{txtEvent}}</small>
-  </div>
-  <div class="card-text  p-1">
-    <button (click)="onclick($event)" class="btn-primary btn-small">Click Me</button>{{clickResult}}
-  </div>
+<div class="text-muted p-1">
+  Two way data Binding :
+  <small>{{txtTwoWay}}
+    <span class="bg-info text-white"> this requries @angular/forms</span>
+  </small>
 </div>
-<div class="card ">
-  <div class="text-muted p-1">
-    Two way data Binding :
-    <small>{{txtTwoWay}} <span class="bg-info text-white"> this requries @angular/forms</span></small>
-  </div>
-  <p class="card-text  p-1">    
-    <input type="text" [(ngModel)]="propertyForTwoWay" /> {{propertyForTwoWay}}
-  </p>
-</div>
+<p class="card-text  p-1">
+  <input type="text" [(ngModel)]="propertyForTwoWay" /> {{propertyForTwoWay}}
+</p>

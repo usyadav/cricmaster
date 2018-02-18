@@ -1,85 +1,45 @@
-<div class="card">
-  <h5 class="bg-primary text-white">
-    Using Directives
-  </h5>
-
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="text-primary  p-1">
-          Built in Structural Directives
-        </div>
-        <div class="text-success p-1">
-          <p class="card-text  p-1">
-            <span class="text-muted">ngIf: content hiddden</span>
-            <span *ngIf="!playersList.length>0"></span> Actual length is : {{playersList.length}}
-          </p>
-        </div>
-        <div class="text-success p-1">
-          <p class="card-text  p-1 text-muted">
-            ngSwitch: switch case
-          </p>
-          <ul *ngFor="let player of playersList" [ngSwitch]="player.team">
-            <li *ngSwitchCase="'IN'" class="text-warning">
-              {{player.name }} {{ player.team }}
-            </li>
-            <li *ngSwitchCase="'PK'" class="text-primary">
-              {{player.name }} ({{ player.team }})
-            </li>
-            <li *ngSwitchDefault class="text-info">
-              {{player.name }} ({{ player.team }})
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="text-primary  p-1">
-          Custom Directives
-        </div>
-        <div class="p-1">
-          <p appHighlight>Simple directive</p>
-          <p appHighlightWithColor tcolor="blue" tsize="20px">pass parameter to Directive Demo </p>
-          <p appHighlightWithEvent="yellow" defaultValue="blue">dynamic color from directive event Demo</p>
-        </div>
-      </div>
-
-    </div>
+<h5 class="bg-primary text-white">
+  Builtin Directives
+</h5>
+<div>
+  <div class="text-primary  p-1">
+    Built in Structural Directives
+  </div>
+  <div class="text-success p-1">
+    <p class="card-text  p-1">
+      <span class="text-muted">ngIf: content hiddden</span>
+      <span *ngIf="!playersList.length>0"></span> Actual length is : {{playersList.length}}
+    </p>
+  </div>
+  <div class="text-success p-1">
+    <p class="card-text  p-1 text-muted">
+      ngSwitch: switch case
+    </p>
+    <ul *ngFor="let player of playersList" [ngSwitch]="player.team">
+      <li *ngSwitchCase="'IN'" class="text-warning">
+        {{player.name }} {{ player.team }}
+      </li>
+      <li *ngSwitchCase="'PK'" class="text-primary">
+        {{player.name }} ({{ player.team }})
+      </li>
+      <li *ngSwitchDefault class="text-info">
+        {{player.name }} ({{ player.team }})
+      </li>
+    </ul>
   </div>
 </div>
-<div class="card">
-  <h5 class="bg-primary text-white">
-    Using Pipes
-  </h5>
 
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="text-primary  p-1">
-          Built in Pipes Demo
-        </div>
-        <div class="p-1">
-          <p>Lower case {{ 'AB-c-X' | lowercase }}</p>
+<h5 class="bg-primary text-white">
+  Built in Pipes
+</h5>
+<div class="text-primary  p-1">
 
-          <p>Currency {{ 110.02 | currency | lowercase }}</p>
+</div>
+<div class="p-1">
+  <p>Lower case {{ 'AB-c-X' | lowercase }}</p>
 
-          <p>Price : {{ 113.89| currency:'USD':true:'1.2-2' }}</p>
+  <p>Currency {{ 110.02 | currency | lowercase }}</p>
 
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-        <div class="card">
-          <div class="text-primary  p-1">
-            Custom Pipes Demo
-          </div>
-          <div class="p-1">
-            <p>Remove hyphen from  'A-B' to spaces : <span>{{ 'A-B' | convertToSpaces:'-' }}</span></p>
-            <p>Remove * from  'A*B' to spaces : <span>{{ 'A*B' | convertToSpaces:'*' }}</span></p>
-          </div>
-        </div>
-      </div>
-  </div>
+  <p>Price : {{ 113.89| currency:'USD':true:'1.2-2' }}</p>
+
 </div>

@@ -27,7 +27,7 @@ export class DemoComponent implements OnInit {
       state: "directives"
     },{
       title: "Create Component",
-      icon: "fas fa-code",
+      icon: "fas fa-asterisk",
       state: "component"
     },
     {
@@ -37,7 +37,7 @@ export class DemoComponent implements OnInit {
     },
     {
       title: "Services",
-      icon: "fas fa-anchor",
+      icon: "fas fa-arrows-alt",
       state: "service"
     },
     {
