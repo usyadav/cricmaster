@@ -43,3 +43,11 @@
   <p>Price : {{ 113.89| currency:'USD':true:'1.2-2' }}</p>
 
 </div>
+<div class="p-1">
+  <form #f="ngForm">
+    <input type="text" name="stringToFilter" [(ngModel)]="stringPipeFromComponent" />
+    <input type="text" name="filter1" [(ngModel)]="convertFilter"/>
+    <button class="btn btn-primary btn-sm" (click)="convert()">Convert</button>
+    <p>Piped value From Code : {{ convertedString }} </p>
+  </form>
+</div>

@@ -10,6 +10,7 @@ import { ConvertToSpacesPipe } from './convert-to-spaces.pipe';
     CommonModule
   ],
   declarations: [HighlightDirective, HighlightWithColorDirective,HighlightWithEventDirective, ConvertToSpacesPipe],
-  exports : [HighlightDirective, HighlightWithColorDirective,HighlightWithEventDirective,ConvertToSpacesPipe]
+  exports : [HighlightDirective, HighlightWithColorDirective,HighlightWithEventDirective,ConvertToSpacesPipe],
+  providers:[ConvertToSpacesPipe]
 })
 export class SharedModule { }
