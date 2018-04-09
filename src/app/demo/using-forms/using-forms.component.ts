@@ -50,4 +50,8 @@ export class UsingFormsComponent implements OnInit {
     else {
     }
   }
+
+  addItem(player:any){
+
+  }
 }

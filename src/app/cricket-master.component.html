@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-light bg-faded">
     <div class="d-inline-flex justify-content-between ">
-        <a class="navbar-brand" href="#">{{ pageTitle }}</a>
+        <a class="navbar-brand" href="#" >{{ pageTitle }}</a>
         <ul class="nav d-inline-flex justify-content-end">
             <li class="nav-item">
                 <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
@@ -21,8 +21,8 @@
     </div>
 </nav>
 <main class="pt-3  pl-3">
-    <h4 class="text-muted">
-        {{welcomeText}}
+    <h4 class="text-muted" i18n="@@welcomeText">
+            Welcome to our App
     </h4>
     <div class="container-fluid">
         <!-- Start : This will be replaced by url component-->

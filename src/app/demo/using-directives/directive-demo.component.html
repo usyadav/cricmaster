@@ -8,7 +8,7 @@
   <div class="text-success p-1">
     <p class="card-text  p-1">
       <span class="text-muted">ngIf: content hiddden</span>
-      <span *ngIf="!playersList.length>0"></span> Actual length is : {{playersList.length}}
+      <span *ngIf="!(playersList.length > 0)"></span> Actual length is : {{playersList.length}}
     </p>
   </div>
   <div class="text-success p-1">
@@ -46,8 +46,11 @@
 <div class="p-1">
   <form #f="ngForm">
     <input type="text" name="stringToFilter" [(ngModel)]="stringPipeFromComponent" />
+
     <input type="text" name="filter1" [(ngModel)]="convertFilter"/>
+
     <button class="btn btn-primary btn-sm" (click)="convert()">Convert</button>
+    
     <p>Piped value From Code : {{ convertedString }} </p>
   </form>
 </div>
