@@ -6,6 +6,7 @@ import { DataBindingModule } from './data-binding/data-binding.module';
 import { UsingDirectivesModule } from './using-directives/using-directives.module';
 import { UsingServicesModule } from './using-services/using-services.module';
 import { ComponentAdvancedModule } from './component-advanced/component-advanced.module';
+import { UsingObservablesModule } from './using-observables/using-observables.module';
 
 
 import { DemoComponent } from './demo.component';
@@ -16,7 +17,8 @@ import { RoutingDemoComponent } from './routing-demo/routing-demo.component';
 import { UsingFormsComponent } from './using-forms/using-forms.component';
 import { DemoInProgressComponent } from './demo-in-progress/demo-in-progress.component';
 import { ServiceDemoComponent } from './using-services/service-demo/service-demo.component';
-import { AdvancedComponent  } from './component-advanced/advanced/advanced.component';
+import { AdvancedComponent } from './component-advanced/advanced/advanced.component';
+import { ObservablesDemoComponent } from './using-observables/observables-demo.component';
 
 const demoRoutes: Routes = [
   {
@@ -30,6 +32,7 @@ const demoRoutes: Routes = [
       { path: 'service', component: ServiceDemoComponent },
       { path: 'routing', component: RoutingDemoComponent },
       { path: 'customdirective', component: CustomDirectiveComponent },
+      { path: 'observables', component: ObservablesDemoComponent },
       { path: 'others', component: DemoInProgressComponent },
     ]
   }
@@ -37,7 +40,7 @@ const demoRoutes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule, DataBindingModule, UsingDirectivesModule, UsingServicesModule,ComponentAdvancedModule,
+    CommonModule, DataBindingModule, UsingDirectivesModule, UsingServicesModule, ComponentAdvancedModule, UsingObservablesModule,
     RouterModule.forChild(demoRoutes)
   ],
   exports: [RouterModule]
