@@ -55,9 +55,9 @@ export class DemoComponent implements OnInit {
       icon: "far fa-eye-slash",
       state: "customdirective"
     } ,{
-      title: "Others",
+      title: "Observables",
       icon: "fas fa-utensils",
-      state: "others"
+      state: "observables"
     }      
     ];
   }
